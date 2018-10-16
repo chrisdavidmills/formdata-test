@@ -41,8 +41,8 @@
       const formData = new FormData(form);
       const results = document.querySelector('ul');
 
-      for (let property in formData.__proto__) {
-        let listItem = document.createElement('li');
+      for (var property in formData.__proto__) {
+        var listItem = document.createElement('li');
         listItem.textContent = formData.__proto__[property];
         results.appendChild(listItem);
       }
