@@ -46,6 +46,18 @@
         listItem.textContent = formData.__proto__[property];
         results.appendChild(listItem);
       }
+
+      let blob = new Blob()
+      try {
+        formData.append('test', blob, 'blah.txt');
+        let listItem = document.createElement('li');
+        listItem.textContent = '3-argument version of append() is supported.';
+        results.appendChild(listItem);
+      } catch(e) {
+        let listItem = document.createElement('li');
+        listItem.textContent = '3-argument version of append() is not supported.';
+        results.appendChild(listItem);
+      }
     </script>
   </body>
 </html>
