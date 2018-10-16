@@ -55,7 +55,7 @@
         results.appendChild(listItem);
       } catch(e) {
         let listItem = document.createElement('li');
-        listItem.textContent = '3-argument version of append() is not supported.';
+        listItem.textContent = e;
         results.appendChild(listItem);
       }
     </script>
